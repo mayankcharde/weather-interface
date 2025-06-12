@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css" />
+    <!-- <link rel="stylesheet" href="main.py" /> -->
+    <!-- <link rel="stylesheet" href="index.js" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div>
+          <h1>Weather<span class="accent">Lab</span></h1>
+          <p class="datetime" id="datetime"></p>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      </header>
+
+      <div class="weather-app">
+        <div class="search-box">
+          <input 
+            type="text" 
+            id="cityInput" 
+            placeholder="Enter city name..." 
+            aria-label="Search for a city"
+          />
+          <button onclick="getWeather()">
+            <span>Search</span>
+          </button>
+        </div>
+
+        <div id="weather" class="hidden">
+          <img id="weather-icon" class="weather-icon" src="" alt="Weather icon">
+          <h2 id="location"></h2>
+          <div class="weather-temp" id="temperature"></div>
+          <p id="description" class="weather-description"></p>
+          <div class="weather-details">
+            <div class="detail">
+              <p>Humidity</p>
+              <p id="humidity"></p>
+            </div>
+            <div class="detail">
+              <p>Wind Speed</p>
+              <p id="wind"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="weather.js"></script>
+  </body>
+</html>
